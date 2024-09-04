@@ -1,20 +1,30 @@
 <script setup lang="ts">
 
-import MenuPlus from '@/views/MenuPlus.vue'
+import MenuPlus from '@/views/menu/MenuPlus.vue'
 import { ref, onMounted } from "vue";
 import emitter from '@/utils/eventBus'
-import {menus} from "@/api/api";
+import {getMenus} from "@/api/api";
 
 let menuData = ref<Array<any>>([])
-menus().then(res=>{
-  menuData.value = res.data
-  emitter.emit('menus', {menus: menuData.value})
+onMounted(async () => {
+  loadMenu()
 })
+
+async function loadMenu() {
+  console.log('------------------')
+  try {
+    let res = await getMenus();
+    menuData.value = res.data
+    emitter.emit('menus', {menus: menuData.value})
+  } catch (error) {
+    console.error('加载菜单数据时出错', error)
+  }
+}
 
 let active = ref<string>('1');
 setTimeout(function(){
   activeNav(active.value)
-}, 500);
+}, 500)
 
 const isScrollDown = ref<boolean>(false);
 const isScrollUp = ref<boolean>(false);
@@ -44,6 +54,7 @@ function activeMenu(deltaY: number) {
     activeNav(activeIndex)
   }
 }
+
 function activeNav(activeMenu: number) {
   active.value = activeMenu.toString()
   emitter.emit('navSwitch', {index: active.value})
@@ -53,7 +64,7 @@ function activeNav(activeMenu: number) {
 
 <template>
   <div class="navClass">
-    <el-menu text-color="#FFFFFFFF" active-text-color="#FFFFFFFF" background-color="#ffffff26" :default-active="active" class="el-menu-vertical-custom" :collapse="true" @select="activeNav">
+    <el-menu text-color="#FFFFFFFF" background-color="#ffffff26" :default-active="active" class="el-menu-vertical-custom" :collapse="true" @select="activeNav">
       <el-menu-item :index="menu.index" v-for="menu in menuData">
         <component :is="menu.icon" class="menuIcon"></component>
         <template  #title> {{ menu.name }} </template>
@@ -62,7 +73,7 @@ function activeNav(activeMenu: number) {
   </div>
 
   <div class="option">
-    <MenuPlus />
+    <MenuPlus @menuFrush="loadMenu"/>
 
     <div class="select next">
       <el-icon><setting /></el-icon>
@@ -81,9 +92,10 @@ function activeNav(activeMenu: number) {
   height: auto;
 }
 
-.el-menu-item .is-active {
+.el-menu-item.is-active {
   background-color: #ffffff26!important;
 }
+
 .menuIcon {
   width: 20px;
   height: 20px;

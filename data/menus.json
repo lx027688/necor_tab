@@ -1,42 +1,10 @@
 {
   "data": [
-    {"index": "1", "name": "One", "icon": "location", "nav": [
-      {"x":0,"y":0,"w":2,"h":1,"i":"0","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":0,"y":1,"w":2,"h":1,"i":"1","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":0,"y":2,"w":2,"h":1,"i":"2","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":0,"y":3,"w":2,"h":1,"i":"3","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":2,"y":0,"w":2,"h":1,"i":"4","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":2,"y":1,"w":2,"h":1,"i":"5","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":2,"y":2,"w":2,"h":1,"i":"6","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":2,"y":3,"w":2,"h":1,"i":"7","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":4,"y":0,"w":2,"h":1,"i":"8","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":4,"y":1,"w":2,"h":1,"i":"9","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":4,"y":2,"w":2,"h":1,"i":"10","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":4,"y":3,"w":2,"h":1,"i":"11","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":6,"y":0,"w":2,"h":1,"i":"12","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":6,"y":1,"w":2,"h":1,"i":"13","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":6,"y":2,"w":2,"h":1,"i":"14","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":6,"y":3,"w":2,"h":1,"i":"15","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":8,"y":0,"w":2,"h":1,"i":"16","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":8,"y":1,"w":2,"h":1,"i":"17","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":8,"y":2,"w":2,"h":1,"i":"18","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"},
-      {"x":8,"y":3,"w":2,"h":1,"i":"19","title": "百度","url":"https://www.baidu.com","img":"src/assets/imgs/navs/baidu.png"}
-    ]},
-    {"index": "2", "name": "Two", "icon": "Grid", "nav":[
-      {"x":0,"y":0,"w":2,"h":1,"i":"0","title": "openai","url":"https://www.baidu.com","img":"src/assets/imgs/navs/openai.png"},
-      {"x":0,"y":1,"w":2,"h":1,"i":"1","title": "openai","url":"https://www.baidu.com","img":"src/assets/imgs/navs/openai.png"},
-      {"x":0,"y":2,"w":2,"h":1,"i":"2","title": "openai","url":"https://www.baidu.com","img":"src/assets/imgs/navs/openai.png"},
-      {"x":0,"y":3,"w":2,"h":1,"i":"3","title": "openai","url":"https://www.baidu.com","img":"src/assets/imgs/navs/openai.png"}
-    ]},
-    {"index": "3", "name": "Three", "icon": "document", "nav":[
-      {"x":0,"y":0,"w":2,"h":1,"i":"0","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":0,"y":1,"w":2,"h":1,"i":"1","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":0,"y":2,"w":2,"h":1,"i":"2","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":0,"y":3,"w":2,"h":1,"i":"3","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":2,"y":0,"w":2,"h":1,"i":"4","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":2,"y":1,"w":2,"h":1,"i":"5","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":2,"y":2,"w":2,"h":1,"i":"6","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"},
-      {"x":2,"y":3,"w":2,"h":1,"i":"7","title": "java","url":"https://www.baidu.com","img":"src/assets/imgs/navs/java.png"}
-    ]}
+    {"index": "1", "name": "One", "icon": "location", "sort":1},
+    {"index": "2", "name": "Two", "icon": "Grid", "sort":2},
+    {"index": "3", "name": "Three", "icon": "document", "sort":3},
+    {"index": "4", "name": "Four", "icon": "location", "sort":4},
+    {"index": "5", "name": "Five", "icon": "Grid", "sort":5},
+    {"index": "6", "name": "Six", "icon": "document", "sort":6}
   ]
 }
